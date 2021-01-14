@@ -1,0 +1,29 @@
+# Write a program to compute the frequency of the words from the input. The output should output after sorting the key alphanumerically.
+#
+# Suppose the following input is supplied to the program:
+#
+# New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
+# Then, the output should be:
+#
+# 2:2
+# 3.:1
+# 3?:1
+# New:1
+# Python:5
+# Read:1
+# and:1
+# between:1
+# choosing:1
+# or:2
+# to:1
+
+x = input().split()
+y = list(set(x))
+y.sort()
+for i in y:
+    print(i + ':' + str(x.count(i)))
+
+# best sol:
+from pprint import pprint
+p=input().split()
+pprint({i:p.count(i) for i in p})
